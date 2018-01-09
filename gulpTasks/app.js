@@ -23,7 +23,7 @@ gulp.task('app.css', () =>{
 gulp.task('app.js', () =>{
   return gulp.src('app/**/*.js')
   .pipe(babel({ presets: ['env'] } ))
-  .pipe(uglifycss())
+  .pipe(uglify())
   .pipe(concat('app.min.js'))
   .pipe(gulp.dest('public/assets/js'))
 })
