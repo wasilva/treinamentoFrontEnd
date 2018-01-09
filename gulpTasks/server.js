@@ -1,5 +1,3 @@
-import { walk } from 'watch/main';
-
 const gulp = require('gulp')
 const watch = require('gulp-watch')
 const webserver = require('gulp-webserver')
