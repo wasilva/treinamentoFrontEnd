@@ -12,7 +12,7 @@
   "author": "William A. Silva",
   "license": "ISC",
   "devDependencies": {
-    "admin-lte": "^2.3.11",
+    "admin-lte": "2.3.11",
     "angular": "1.6.6",
     "angular-animate": "1.6.6",
     "angular-toastr": "2.1.1",
