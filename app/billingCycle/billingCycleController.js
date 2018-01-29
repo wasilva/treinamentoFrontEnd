@@ -8,7 +8,7 @@
       const vm = this
   
       vm.create = function() {
-        const url = 'http://localhost:3003/api/billingCycles'
+        const url = 'http://localhost:3000/api/billingCycles'
         $http.post(url, vm.billingCycle).sucess(function(response) {
           vm.billingCycle = {}
           console.log('Sucesso!')
