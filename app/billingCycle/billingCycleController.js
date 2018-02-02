@@ -27,6 +27,17 @@
         })
       }
 
+    //Altera os registros
+    vm.update = function() {
+        const updateUrl = `${url}/${vm.billingCycle._id}`
+        $http.put(updateUrl, vm.billingCycle).then(function(response) {
+          vm.refresh()
+          msgs.addSuccess('Operação realizada com sucesso!')
+        }).catch(function(data) {
+           msgs.addError(data.errors)
+        })
+      }
+
       vm.showTabUpdate = function(billingCycle) {
         vm.billingCycle = billingCycle
         tabs.show(vm, {tabUpdate: true})
