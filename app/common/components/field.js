@@ -6,7 +6,8 @@ angular.module('primeiraApp').component('field', {
     grid: '@',
     model: '=',
     placeholder: '@',
-    readonly: '<'
+    readonly: '<',
+
   },
   controller: [
     'gridSystem',
@@ -19,7 +20,7 @@ angular.module('primeiraApp').component('field', {
      <div class="form-group">
        <label for="{{ $ctrl.id }}">{{ $ctrl.label }}</label>
        <input id="{{ $ctrl.id }}" class="form-control" placeholder="{{ $ctrl.placeholder }}"
-          type="{{ $ctrl.type }}" ng-model="$ctrl.model" />
+          type="{{ $ctrl.type }}" ng-model="$ctrl.model" ng-readonly="$ctrl.readonly" />
      </div>
    </div>
   `
