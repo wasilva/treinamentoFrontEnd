@@ -59,6 +59,40 @@
         })
       }
     
+      // Adicionar Crédito
+      vm.addCredit = function(index) {
+        vm.billingCycle.credits.splice(index + 1, 0, {name: null, value: null})
+      }
+    
+      // Clonar Crédito
+      vm.cloneCredit = function(index, {name, value}) {
+        vm.billingCycle.credits.splice(index + 1, 0, {name, value})
+        initCreditsAndDebts()
+      }
+    
+      // Deletar Crédito
+      vm.deleteCredit = function(index) {
+        vm.billingCycle.credits.splice(index, 1)
+        initCreditsAndDebts()
+      }
+
+      // Adicionar Débito
+      vm.addDebt = function(index) {
+        vm.billingCycle.debts.splice(index + 1, 0, {})
+      }
+    
+       // Clonar Débito
+       vm.cloneDebt = function(index, {name, value, status}) {
+        vm.billingCycle.debts.splice(index + 1, 0, {name, value, status})
+        initCreditsAndDebts()
+      }
+    
+       // Deletar Débito
+       vm.deleteDebt = function(index) {
+        vm.billingCycle.debts.splice(index, 1)
+        initCreditsAndDebts()
+      }
+
       vm.refresh()
   }
 })()

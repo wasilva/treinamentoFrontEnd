@@ -21,9 +21,9 @@
             ng-readonly="tabDelete" />
         </td>
         <td style="width:150px;" ng-if="!tabDelete">
-          <button class="btn btn-success" ng-click="addDebt($index)"><i class="fa fa-plus"></i></button>
-          <button class="btn btn-warning" ng-click="cloneDebt($index,debt)"><i class="fa fa-clone"></i></button>
-          <button class="btn btn-danger" ng-click="deleteDebt($index)"><i class="fa fa-trash-o"></i></button>
+          <button class="btn btn-success" ng-class="{disabled: bcCtrl.tab.Delete}" ng-click="bcCtrl.addDebt($index)"><i class="fa fa-plus"></i></button>
+          <button class="btn btn-warning" ng-class="{disabled: bcCtrl.tab.Delete}" ng-click="bcCtrl.cloneDebt($index,debt)"><i class="fa fa-clone"></i></button>
+          <button class="btn btn-danger" ng-class="{disabled: bcCtrl.tab.Delete}" ng-click="bcCtrl.deleteDebt($index)"><i class="fa fa-trash-o"></i></button>
         </td>
         <td style="width:150px;" ng-if="tabDelete">
           <button class="btn btn-success disabled"><i class="fa fa-plus"></i></button>
