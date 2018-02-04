@@ -1,17 +1,25 @@
 (function(){
   angular.module('primeiraApp').controller('BillingCycleCtrl', [
       '$http',
+<<<<<<< HEAD
       '$location',
+=======
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
       'msgs',
       'tabs',
       BillingCycleController
   ])
 
+<<<<<<< HEAD
   function BillingCycleController($http, $location, msgs, tabs){
+=======
+  function BillingCycleController($http, msgs, tabs){
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
       const vm = this
       const url = 'http://localhost:3003/api/billingCycles'
 
       vm.refresh = function(){
+<<<<<<< HEAD
           const page = parseInt($location.search().page) || 1
           $http.get(`${url}?skip=${(page - 1) * 10}&limit=10`).then(function(response){
               vm.billingCycle = {credits: [{}], debts: [{}]}
@@ -25,6 +33,12 @@
               })
 
               
+=======
+          $http.get(url).then(function(response){
+              vm.billingCycle = {credits: [{}], debts: [{}]}
+              vm.billingCycles = response.data
+              tabs.show(vm, {tabList: true, tabCreate: true})
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
           })
       }
 
@@ -50,13 +64,19 @@
 
       vm.showTabUpdate = function(billingCycle) {
         vm.billingCycle = billingCycle
+<<<<<<< HEAD
         vm.calculateValues()    
+=======
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
         tabs.show(vm, {tabUpdate: true})
       }
     
       vm.showTabDelete = function(billingCycle) {
         vm.billingCycle = billingCycle
+<<<<<<< HEAD
         vm.calculateValues()    
+=======
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
         tabs.show(vm, {tabDelete: true})
       }
 
@@ -79,15 +99,23 @@
       // Clonar Crédito
       vm.cloneCredit = function(index, {name, value}) {
         vm.billingCycle.credits.splice(index + 1, 0, {name, value})
+<<<<<<< HEAD
         vm.calculateValues()      
         // initCreditsAndDebts()
+=======
+        initCreditsAndDebts()
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
       }
     
       // Deletar Crédito
       vm.deleteCredit = function(index) {
         vm.billingCycle.credits.splice(index, 1)
+<<<<<<< HEAD
         vm.calculateValues()        
         // initCreditsAndDebts()
+=======
+        initCreditsAndDebts()
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
       }
 
       // Adicionar Débito
@@ -98,13 +126,18 @@
        // Clonar Débito
        vm.cloneDebt = function(index, {name, value, status}) {
         vm.billingCycle.debts.splice(index + 1, 0, {name, value, status})
+<<<<<<< HEAD
         vm.calculateValues()        
         // initCreditsAndDebts()
+=======
+        initCreditsAndDebts()
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
       }
     
        // Deletar Débito
        vm.deleteDebt = function(index) {
         vm.billingCycle.debts.splice(index, 1)
+<<<<<<< HEAD
         vm.calculateValues()    
         // initCreditsAndDebts()
       }
@@ -125,6 +158,9 @@
 
           vm.total = vm.credit - vm.debt
         }
+=======
+        initCreditsAndDebts()
+>>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
       }
 
       vm.refresh()
