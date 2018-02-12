@@ -14,7 +14,6 @@
           <input ng-model="debt.name" class="form-control" placeholder="Informe o Nome" ng-readonly="bcCtrl.tabDelete" />
         </td>
         <td>
-<<<<<<< HEAD
           <input ng-model="debt.value" class="form-control" placeholder="Informe a Valor" ng-change="bcCtrl.calculateValues()" ng-readonly="bcCtrl.tabDelete" type="number" />
         </td>
         <td>
@@ -24,18 +23,6 @@
           <button class="btn btn-success" ng-disabled="bcCtrl.tabDelete" ng-click="bcCtrl.addDebt($index)"><i class="fa fa-plus"></i></button>
           <button class="btn btn-warning" ng-disabled="bcCtrl.tabDelete" ng-click="bcCtrl.cloneDebt($index,debt)"><i class="fa fa-clone"></i></button>
           <button class="btn btn-danger" ng-disabled="bcCtrl.tabDelete" ng-click="bcCtrl.deleteDebt($index)"><i class="fa fa-trash-o"></i></button>
-=======
-          <input ng-model="debt.value" class="form-control" placeholder="Informe a Valor" ng-readonly="bcCtrl.tabDelete" type="number" />
-        </td>
-        <td>
-          <input ng-model="debt.status" class="form-control" placeholder="Informe o Status"
-            ng-readonly="tabDelete" />
-        </td>
-        <td style="width:150px;" ng-if="!tabDelete">
-          <button class="btn btn-success" ng-class="{disabled: bcCtrl.tab.Delete}" ng-click="bcCtrl.addDebt($index)"><i class="fa fa-plus"></i></button>
-          <button class="btn btn-warning" ng-class="{disabled: bcCtrl.tab.Delete}" ng-click="bcCtrl.cloneDebt($index,debt)"><i class="fa fa-clone"></i></button>
-          <button class="btn btn-danger" ng-class="{disabled: bcCtrl.tab.Delete}" ng-click="bcCtrl.deleteDebt($index)"><i class="fa fa-trash-o"></i></button>
->>>>>>> b6ba0aaab5bfbeffd13a66986ad9d1154f4895e2
         </td>
         <td style="width:150px;" ng-if="tabDelete">
           <button class="btn btn-success disabled"><i class="fa fa-plus"></i></button>
