@@ -1,4 +1,4 @@
-angular.module('primeiraApp').component('contentHeader', {
+angular.module('wasinfoErp').component('contentHeader', {
   bindings: {
      name: '@',
      small: '@',

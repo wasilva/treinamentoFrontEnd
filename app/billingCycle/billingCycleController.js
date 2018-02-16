@@ -1,6 +1,6 @@
 (function ()
 {
-  angular.module('primeiraApp').controller('BillingCycleCtrl', [
+  angular.module('wasinfoErp').controller('BillingCycleCtrl', [
     '$http',
     '$location',
     'msgs',

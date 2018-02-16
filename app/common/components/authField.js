@@ -1,4 +1,4 @@
-angular.module('primeiraApp').component('authField', {
+angular.module('wasinfoErp').component('authField', {
 	bindings: {
 		id: '@',
 		label: '@',

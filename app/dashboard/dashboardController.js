@@ -1,6 +1,6 @@
 (function ()
 {
-  angular.module('primeiraApp').controller('DashboardCtrl', [
+  angular.module('wasinfoErp').controller('DashboardCtrl', [
     '$http',
     DashboardController
   ])

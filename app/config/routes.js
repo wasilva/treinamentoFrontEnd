@@ -1,4 +1,4 @@
-angular.module('primeiraApp').config([
+angular.module('wasinfoErp').config([
   '$stateProvider',
   '$urlRouterProvider',
   '$httpProvider',

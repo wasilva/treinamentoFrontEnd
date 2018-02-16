@@ -1,4 +1,4 @@
-angular.module('primeiraApp').component('paginator', {
+angular.module('wasinfoErp').component('paginator', {
    bindings: {
      url: '@',
      pages: '@',
