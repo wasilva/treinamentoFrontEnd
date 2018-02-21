@@ -14,7 +14,7 @@
 
         function getUser()
         {
-            if (!user) {
+            if (!user) {   
                 user = JSON.parse(localStorage.getItem(consts.userKey))
                 $http.defaults.headers.common.Authorization = user ? user.token : null
             }
