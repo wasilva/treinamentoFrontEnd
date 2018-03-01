@@ -31,5 +31,7 @@
     "gulp-webserver": "0.9.1",
     "run-sequence": "2.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "adminlte": "^2.4.1"
+  }
 }

@@ -26,7 +26,6 @@
         {
           vm.pages = Math.ceil(response.data.value / 10)
           tabs.show(vm, { tabList: true, tabCreate: true })
-
         })
       })
     }
