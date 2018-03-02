@@ -4,13 +4,15 @@ angular.module('wasinfoErp').config([
   '$httpProvider',
   function ($stateProvider, $urlRouterProvider, $httpProvider)
   {
-    $stateProvider.state('dashboard', {
-      url: "/dashboard",
-      templateUrl: "dashboard/dashboard.html"
-    }).state('billingCycle', {
-      url: "/billingCycles?page",
-      templateUrl: "billingCycle/tabs.html"
-    })
+    $stateProvider
+      .state('dashboard', {
+        url: "/dashboard",
+        templateUrl: "dashboard/dashboard.html"
+      })
+      .state('billingCycle', {
+        url: "/billingCycles?page",
+        templateUrl: "billingCycle/tabs.html"
+      });
 
     $httpProvider.interceptors.push('handleResponseError')
   }])

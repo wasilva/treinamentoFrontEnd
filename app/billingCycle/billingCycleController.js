@@ -135,6 +135,7 @@
       vm.debt = 0
 
       if (vm.billingCycle) {
+
         vm.billingCycle.credits.forEach(function ({ value })
         {
           vm.credit += !value || isNaN(value) ? 0 : parseFloat(value)

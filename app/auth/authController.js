@@ -1,13 +1,14 @@
 (function ()
 {
     angular.module('wasinfoErp').controller('AuthCtrl', [
+        '$state',
         '$location',
         'msgs',
         'auth',
         AuthController
     ])
 
-    function AuthController($location, msgs, auth)
+    function AuthController($state, $location, msgs, auth)
     {
         const vm = this
 
@@ -19,14 +20,23 @@
         vm.login = () =>
         {
             auth.login(vm.user)
-                .then((resp) => $location.path('/'))
+                .then((resp) =>
+                {
+                    $state.go('dashboard');
+                })
                 .catch((err) => msgs.addError(err))
                 ;
         }
 
         vm.signup = () =>
         {
-            auth.signup(vm.user, err => err ? msgs.addError(err) : $location.path('/'))
+            auth.signup(vm.user)
+                .then((resp) =>
+                {
+                    $state.go('dashboard');
+                })
+                .catch((err) => msgs.addError(err))
+                ;
         }
 
         vm.getUser = () => auth.getUser()

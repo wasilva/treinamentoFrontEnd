@@ -14,37 +14,38 @@
 
         function getUser()
         {
-            if (!user) {   
+            if (!user) {
                 user = JSON.parse(localStorage.getItem(consts.userKey))
                 $http.defaults.headers.common.Authorization = user ? user.token : null
             }
             return user
         }
 
-        function signup(user, callback)
+        function signup(user)
         {
-            submit('signup', user, callback)
+            return submit('signup', user)
         }
 
-        function login(user, callback)
+        function login(user)
         {
-            return submit('login', user, callback)
+            return submit('login', user)
         }
 
-        function submit(url, user, callback)
+        function submit(url, user)
         {
-            return $http.post(`${consts.oapiUrl}/${url}`, user, { headers: { 'Content-Type': 'application/json' } })
-                .then(resp =>
-                {
-                    localStorage.setItem(consts.userKey, JSON.stringify(resp.data))
-                    $http.defaults.headers.common.Authorization = resp.data.token
-                    return resp.data
-                    // if (callback) callback(null, resp.data)
-                }).catch(function (resp)
-                {
-                    return resp.data.errors
-                    // if (callback) callback(resp.data.errors, null)
-                })
+            return new Promise((resolve, reject) =>
+            {
+                $http
+                    .post(`${consts.apiUrl}/${url}`, user, { headers: { 'Content-Type': 'application/json' } })
+                    .then(resp =>
+                    {
+                        localStorage.setItem(consts.userKey, JSON.stringify(resp.data))
+                        $http.defaults.headers.common.Authorization = resp.data.token
+                        resolve(resp.data);
+                    })
+                    .catch((resp) => reject(resp.data.errors))
+                    ;
+            });
         }
 
         function logout(callback)
@@ -58,7 +59,7 @@
         function validateToken(token, callback)
         {
             if (token) {
-                $http.post(`${consts.oapiUrl}/validateToken`, { token })
+                $http.post(`${consts.apiUrl}/validateToken`, { token })
                     .then(resp =>
                     {
                         if (!resp.data.valid) {
