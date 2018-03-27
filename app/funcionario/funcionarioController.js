@@ -20,14 +20,15 @@
                 console.log(vm.funcionario)
                 $http.get(`${url}/count`).then(function (response) {
                     vm.pages = Math.ceil(response.data.value / 10)
-                    tabs.show(vm, { tabList: true, tabCreate: true, tabAddress: true })
+                    tabs.show(vm, { tabList: true, tabCreate: true, tabAddress: true, tabDadosPessoais: true, tabDadosComplementar: true, tabDadosAdministrativos: true })
                 })
             })
         }
+
         //Exibe as tabs do cadastro do funcionario
         vm.showTabFunCad = function (funcionario) {
             vm.funcionario = funcionario
-            tabs.show(vm, { tabAddress: true })
+            tabs.show(vm, { tabAddress: true, tabDadosPessoais: true })
         }
 
         
