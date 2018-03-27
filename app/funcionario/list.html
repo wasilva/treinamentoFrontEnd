@@ -1,0 +1,31 @@
+<!-- Lista de creditos e debitos -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="funcionario in funCtrl.funcionarios">
+                <td>{{:: funcionario.nomefuncionario }}</td>
+                <td>{{:: funcionario.cpf }}</td>
+                <td>{{:: funcionario.endereco }}</td>
+                <td style="width:100px;">
+                    <button class="btn btn-warning" ng-click="funCtrl.showTabUpdate(funcionario)">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                    <button class="btn btn-danger" ng-click="funCtrl.showTabDelete(funcionario)">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+    <div class="box-footer clearfix">
+        <paginator url="/#!/funcionarios" pages="{{ funCtrl.pages }}"></paginator>
+    </div>

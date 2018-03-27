@@ -1,3 +1,4 @@
+<!-- Tela pricipal do financeiro -->
 <content-header name="Financeiro" small="Cadastro"></content-header>
 
 <section class="content">
@@ -27,7 +28,7 @@
         </a>
       </li>
     </ul>
-    
+
     <div class="tab-content">
       <div class="tab-pane" id="tabList" ng-include="'billingCycle/list.html'" ng-class="{active: bcCtrl.tabList}" ng-if="bcCtrl.tabList"></div>
       <div class="tab-pane" id="tabCreate" ng-include="'billingCycle/form.html'" ng-if="bcCtrl.tabCreate"></div>
