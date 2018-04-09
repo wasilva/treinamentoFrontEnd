@@ -1,6 +1,14 @@
 <!-- Tela de inclusão de registro -->
 <div role="form">
-    <div class="form-group">
-       <h1>Dados complementar</h1>
+    <div class="box-footer">
+        
+        <field id="nomepai" label="Nome do pai" grid="12 6 4" placeholder="Informe o nome do pai" model="funCtrl.funcionario.nomepai" ></field>
+        <field id="nomemae" label="Nome da mãe" grid="12 6 4" placeholder="Informe o nome da mãe" model="funCtrl.funcionario.nomemae"></field>
+        <field id="tiposanguineo" label="Tipo sanguineo" grid="12 6 4" placeholder="Informe o tipo sanguineo" model="funCtrl.funcionario.tiposanguineo" ></field>
+        <field id="religiao" label="Complemento" grid="12 6 4" placeholder="Informe o complemento" model="funCtrl.funcionario.religiao" ></field>
+       
     </div>
+      
+    <!-- Botão - inculuir, exluir, altear e gravar-->
+    <div ng-include="'funcionario/button.html'"></div>
 </div>

@@ -1,0 +1,8 @@
+<!-- Botão - inculuir, exluir, altear e gravar-->
+<div class="box-footer">
+  <button class="btn btn-primary" ng-click="funCtrl.create()" ng-if="funCtrl.tabCreate">Incluir</button>
+  <button class="btn btn-info" ng-if="funCtrl.tabUpdate" ng-click="funCtrl.update()">Alterar</button>
+  <button class="btn btn-danger" ng-if="funCtrl.tabDelete" ng-click="funCtrl.delete()">Excluir</button>
+  <button class="btn btn-default" ng-click="funCtrl.refresh()">Cancelar</button>
+</div>
+    

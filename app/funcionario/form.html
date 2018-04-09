@@ -1,51 +1,31 @@
 <!-- Tela de inclusão de registro -->
 <div role="form">
    
-    <div class="form-group">
-
-        <field id="nomefuncionario" label="*Nome" grid="12 6 4" placeholder="Nome completo" model="funCtrl.funcionario.nomefuncionario" readonly="funCtrl.tabDelete"></field>
-        <field id="datanascimento" label="*Data de Nascimento" grid="12 6 4" placeholder="Data de Nascimento" type="date" model="funCtrl.funcionario.datanascimento" readonly="funCtrl.tabDelete"></field>
-        <field id="cpf" label="*Nº CPF" grid="12 6 4" placeholder="Nº do CPF" model="funCtrl.funcionario.cpf" readonly="funCtrl.tabDelete"></field>
-
-        <field id="rg" label="*Nº RG" grid="12 6 4" placeholder="Nº RG" model="funCtrl.funcionario.rg" readonly="funCtrl.tabDelete"></field>
-        <field id="orgaoemissor" label="Orgão emissor" grid="12 6 4" placeholder="Orgão emissor" model="funCtrl.funcionario.orgaoemissor" readonly="funCtrl.tabDelete"></field>
-        <field id="dataexpedicao" label="Data de expedição" grid="12 6 4" placeholder="Data de expedição" type="date" model="funCtrl.funcionario.dataexpedicao" readonly="funCtrl.tabDelete"></field>
-        <field id="naturalidade" label="Naturalidade" grid="12 6 4" placeholder="Naturalidade" model="funCtrl.funcionario.naturalidade" readonly="funCtrl.tabDelete"></field>
-
-        <field id="tituloeleitor" label="Titulo de Eleitor" grid="12 6 4" placeholder="Titulo de Eleitor" type="number" model="funCtrl.funcionario.tituloeleitor" readonly="funCtrl.tabDelete"></field>
-        <field id="pis" label="Nº PIS" grid="12 6 4" placeholder="Nº do PIS" type="date" model="funCtrl.funcionario.pis" readonly="funCtrl.tabDelete"></field>
-
-        <field id="cnh" label="CNH" grid="12 6 4" placeholder="Nº da CNH" model="funCtrl.funcionario.cnh" readonly="funCtrl.tabDelete"></field>
-        <field id="categoriacnh" label="Categoria da CNH" grid="12 6 4" placeholder="Categoria da CNH" model="funCtrl.funcionario.categoriacnh" readonly="funCtrl.tabDelete"></field>
-        <field id="vencimentocnh" label="Vencimento da CNH" grid="12 6 4" placeholder="Vencimento da CNH" type="date" model="funCtrl.funcionario.vencimentocnh" readonly="funCtrl.tabDelete"></field>
-
-        <field id="datacontratacao" label="*  Data de contratação" grid="12 6 4" placeholder="Data de contratação" type="date" model="funCtrl.funcionario.datacontratacao" readonly="funCtrl.tabDelete"></field>
-        <field id="departamento" label="*Departamento" grid="12 6 4" placeholder="Nome do departamento" model="funCtrl.funcionario.departamento" readonly="funCtrl.tabDelete"></field>
-        <field id="cargo" label="Cargo" grid="12 6 4" placeholder="Nome do cargo" model="funCtrl.funcionario.cago" readonly="funCtrl.tabDelete"></field>
-
-        <!-- 
-                
-                <field id="endereco" label="Endereço" grid="12 6 4" placeholder="Endereço" model="funCtrl.funcionario.endereco"></field>
-                <field id="numero" label="Número" grid="12 6 4" placeholder="Número" model="funCtrl.funcionario.numero"></field>
-                <field id="complemento" label="Complemento" grid="12 6 4" placeholder="Complemento" model="funCtrl.funcionario.complemento"></field>
-                
-                <field id="cep" label="CEP" grid="12 6 4" placeholder="CEP" model="funCtrl.funcionario.cep"></field>
-                <field id="cidade" label="*Cidade" grid="12 6 4" placeholder="Nome da cidade" model="funCtrl.funcionario.cidade"></field>
-                <field id="estato" label="Estado" grid="12 6 4" placeholder="Estado" model="funCtrl.funcionario.estado"></field>
-                
-                <field id="bairro" label="Bairro" grid="12 6 4" placeholder="Nome do bairro" model="funCtrl.funcionario.bairro"></field>
-                <field id="telefone" label="Telefone 1" grid="12 6 4" placeholder="Telefone 1" model="funCtrl.funcionario.telefone"></field>
-                <field id="telefone2" label="Telefone 2" grid="12 6 4" placeholder="Telefone 2" model="funCtrl.funcionario.telefone2"></field>
-                
-                <field id="email" label="E-mail" grid="12 6 4" placeholder="Informe o e-mail" model="funCtrl.funcionario.email"></field>
-            -->
-    </div>
-
     <div class="box-footer">
-        <button class="btn btn-primary" ng-click="funCtrl.create()"  ng-if="funCtrl.tabCreate">Incluir</button>
-        <button class="btn btn-info" ng-if="funCtrl.tabUpdate" ng-click="funCtrl.update()">Alterar</button>
-        <button class="btn btn-danger" ng-if="funCtrl.tabDelete" ng-click="funCtrl.delete()">Excluir</button>
-        <button class="btn btn-default" ng-click="funCtrl.refresh()">Cancelar</button>
+
+        <field id="nomefuncionario" label="*Nome" grid="12 6 4" placeholder="Informe o nome completo" model="funCtrl.funcionario.nomefuncionario" readonly="funCtrl.tabDelete"></field>
+        <field id="datanascimento" label="*Data de Nascimento" grid="12 6 4" placeholder="Informe o data de Nascimento" type="date" model="funCtrl.funcionario.datanascimento" readonly="funCtrl.tabDelete"></field>
+        <field id="cpf" label="*Nº CPF" grid="12 6 4" placeholder="Informe o CPF" model="funCtrl.funcionario.cpf" readonly="funCtrl.tabDelete"></field>
+
+        <field id="rg" label="*Nº RG" grid="12 6 4" placeholder="Informe o RG" model="funCtrl.funcionario.rg" readonly="funCtrl.tabDelete"></field>
+        <field id="orgaoemissor" label="Orgão emissor" grid="12 6 4" placeholder="Informe o orgão emissor" model="funCtrl.funcionario.orgaoemissor" readonly="funCtrl.tabDelete"></field>
+        <field id="dataexpedicao" label="Data de expedição" grid="12 6 4" placeholder="Informe o data de expedição" type="date" model="funCtrl.funcionario.dataexpedicao" readonly="funCtrl.tabDelete"></field>
+        <field id="naturalidade" label="Naturalidade" grid="12 6 4" placeholder="Informe a naturalidade" model="funCtrl.funcionario.naturalidade" readonly="funCtrl.tabDelete"></field>
+
+        <field id="tituloeleitor" label="Titulo de Eleitor" grid="12 6 4" placeholder="Informe o titulo de Eleitor" type="number" model="funCtrl.funcionario.tituloeleitor" readonly="funCtrl.tabDelete"></field>
+        <field id="pis" label="Nº PIS" grid="12 6 4" placeholder="Informe o PIS" type="date" model="funCtrl.funcionario.pis" readonly="funCtrl.tabDelete"></field>
+
+        <field id="cnh" label="CNH" grid="12 6 4" placeholder="Informe a CNH" model="funCtrl.funcionario.cnh" readonly="funCtrl.tabDelete"></field>
+        <field id="categoriacnh" label="Categoria da CNH" grid="12 6 4" placeholder="Informe o categoria da CNH" model="funCtrl.funcionario.categoriacnh" readonly="funCtrl.tabDelete"></field>
+        <field id="vencimentocnh" label="Vencimento da CNH" grid="12 6 4" placeholder="Informe o vencimento da CNH" type="date" model="funCtrl.funcionario.vencimentocnh" readonly="funCtrl.tabDelete"></field>
+
+        <field id="datacontratacao" label="*  Data de contratação" grid="12 6 4" placeholder="Informe a data de contratação" type="date" model="funCtrl.funcionario.datacontratacao" readonly="funCtrl.tabDelete"></field>
+        <field id="departamento" label="*Departamento" grid="12 6 4" placeholder="Informe o nome do departamento" model="funCtrl.funcionario.departamento" readonly="funCtrl.tabDelete"></field>
+        <field id="cargo" label="Cargo" grid="12 6 4" placeholder="Informe o nome do cargo" model="funCtrl.funcionario.cago" readonly="funCtrl.tabDelete"></field>
+               
     </div>
 
+      <!-- Botão - inculuir, exluir, altear e gravar-->
+      <div ng-include="'funcionario/button.html'"></div>
 </div>
+

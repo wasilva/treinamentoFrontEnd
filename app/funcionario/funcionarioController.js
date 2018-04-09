@@ -4,6 +4,7 @@
         '$location',
         'msgs',
         'tabs',
+        '$scope',
         FuncionarioController
     ])
 
@@ -25,13 +26,6 @@
             })
         }
 
-        //Exibe as tabs do cadastro do funcionario
-        vm.showTabFunCad = function (funcionario) {
-            vm.funcionario = funcionario
-            tabs.show(vm, { tabAddress: true, tabDadosPessoais: true })
-        }
-
-        
         // Grava os registros no banco
         vm.create = function () {
             $http.post(url, vm.funcionario).then(function (response) {
@@ -55,7 +49,9 @@
 
         vm.showTabUpdate = function (funcionario) {
             vm.funcionario = funcionario
-            tabs.show(vm, { tabUpdate: true })
+            tabs.show(vm, { 
+                tabUpdate: true 
+            })
         }
 
         vm.showTabDelete = function (funcionario) {
