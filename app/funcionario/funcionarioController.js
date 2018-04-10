@@ -50,7 +50,9 @@
         // Exibe a aba editar
         vm.showTabUpdate = function (funcionario) {
             vm.funcionario = funcionario
-            tabs.show(vm, { tabUpdate: true })
+            tabs.show(vm, { 
+                tabUpdate: true 
+            })
         }
 
         // Exibe a aba excluir
