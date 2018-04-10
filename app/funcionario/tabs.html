@@ -4,13 +4,13 @@
 <section class="content">
     <div class="nav-tabs-custom" ng-controller="FuncionarioCtrl as funCtrl">
         <ul class="nav nav-tabs">
-            <li ng-if="funCtrl.tabList" ng-class="{active: funCtrl.tabList}">
+            <li ng-if="funCtrl.tabList" ng-class="{active: funCtrl.tabList}" >
                 <a href data-target="#tabList" data-toggle="tab">
                     <i class="fa fa-bars"></i> Lista
                 </a>
             </li>
 
-            <li ng-if="funCtrl.tabCreate" ng-if="funCtrl.tabAddress">
+            <li ng-if="funCtrl.tabCreate">
                 <a href data-target="#tabCreate" data-toggle="tab">
                     <i class="fa fa-plus"></i> Incluir
                 </a>
@@ -18,7 +18,7 @@
 
             <li ng-if="funCtrl.tabUpdate" ng-class="{active: funCtrl.tabUpdate}">
                 <a href data-target="#tabUpdate" data-toggle="tab">
-                    <i class="fa fa-pencil"></i> Alterar
+                    <i class="fa fa-pencil"></i> Alterar                   
                 </a>
             </li>
 
@@ -28,40 +28,15 @@
                 </a>
             </li>
         </ul>
-
-        <div class="box-body">
-            <!-- Abas do cadastro do funcionario -->
-            <div class="col-md-12">
-                <!-- Custom Tabs -->
-                <div class="nav-tabs-custom">
-                    <ul class="nav nav-tabs">
-                        <li class="active" ng-if="funCtrl.tabCreate">
-                            <a href data-target="#tabCreate" data-toggle="tab" aria-expanded="true">Dados pessoais</a>
-                        </li>
-                        <li class="active"ng-if="funCtrl.tabAddress">
-                            <a href data-target="#tabAddress" data-toggle="tab" aria-expanded="true">Endereço</a>
-                        </li>
-                        <li class="" ng-if="funCtrl.tabDadosComplementar">
-                            <a href="#tabDadosComplementar" data-toggle="tab" aria-expanded="false">Dados complementar</a>
-                        </li>
-                        <li class="" ng-if="funCtrl.tabDadosAdministrativo">
-                            <a href="#tabDadosAdministrativo" data-toggle="tab" aria-expanded="false">Dados administrativos</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+    
         <div class="tab-content">
+
             <div class="tab-pane" id="tabList" ng-include="'funcionario/list.html'" ng-class="{active: funCtrl.tabList}" ng-if="funCtrl.tabList"></div>
-            <div class="tab-pane" id="tabAddress" ng-include="'funcionario/address.html'" ng-if="funCtrl.tabAddress"></div>
-            <div class="tab-pane" id="tabAddress" ng-include="'funcionario/address.html'" ng-if="funCtrl.tabAddress"></div>
-            <div class="tab-pane" id="tabCreate" ng-include="'funcionario/form.html'" ng-if="funCtrl.tabCreate"></div>
-            <div class="tab-pane" id="tabUpdate" ng-include="'funcionario/form.html'" ng-class="{active: funCtrl.tabUpdate}" ng-if="funCtrl.tabUpdate"></div>
-            <div class="tab-pane" id="tabDelete" ng-include="'funcionario/form.html'" ng-class="{active: funCtrl.tabDelete}" ng-if="funCtrl.tabDelete"></div>
+            <div class="tab-pane" id="tabCreate" ng-include="'funcionario/container.html'" ng-if="funCtrl.tabCreate"></div>
+            <div class="tab-pane" id="tabUpdate" ng-include="'funcionario/dadosPessoais.html'" ng-class="{active: funCtrl.tabUpdate}" ng-if="funCtrl.tabUpdate"></div>
+            <div class="tab-pane" id="tabDelete" ng-include="'funcionario/dadosPessoais.html'" ng-class="{active: funCtrl.tabDelete}" ng-if="funCtrl.tabDelete"></div>
+
         </div>
+        
     </div>
-
-
-
 </section>

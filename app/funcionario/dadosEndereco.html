@@ -1,22 +1,24 @@
 <!-- Tela de inclusão de registro -->
 <div role="form">
+    <div class="box-footer">
+        
+        <field id="endereco" label="Endereço" grid="12 6 4" placeholder="Informe o endereço" model="funCtrl.funcionario.endereco" readonly="funCtrl.tabDelete"></field>
+        <field id="numero" label="Número" grid="12 6 4" placeholder="Informe o número" model="funCtrl.funcionario.numero" readonly="funCtrl.tabDelete"></field>
+        <field id="complemento" label="Complemento" grid="12 6 4" placeholder="Informe o complemento" model="funCtrl.funcionario.complemento" readonly="funCtrl.tabDelete"></field>
+            
+        <field id="cep" label="CEP" grid="12 6 4" placeholder="Informe o CEP" model="funCtrl.funcionario.cep" readonly="funCtrl.tabDelete"></field>
+        <field id="cidade" label="*Cidade" grid="12 6 4" placeholder="Informe o nome da cidade" model="funCtrl.funcionario.cidade" readonly="funCtrl.tabDelete"></field>
+        <field id="estato" label="Estado" grid="12 6 4" placeholder="Informe o estado" model="funCtrl.funcionario.estado" readonly="funCtrl.tabDelete"></field>
+            
+        <field id="bairro" label="Bairro" grid="12 6 4" placeholder="Informe o nome do bairro" model="funCtrl.funcionario.bairro" readonly="funCtrl.tabDelete"></field>
+        <field id="telefone" label="Telefone 1" grid="12 6 4" placeholder="Informe o telefone 1" model="funCtrl.funcionario.telefone" readonly="funCtrl.tabDelete"></field>
+        <field id="telefone2" label="Telefone 2" grid="12 6 4" placeholder="Informe o telefone 2" model="funCtrl.funcionario.telefone2" readonly="funCtrl.tabDelete"></field>
+            
+        <field id="email" label="E-mail" grid="12 6 4" placeholder="Informe o e-mail" model="funCtrl.funcionario.email" readonly="funCtrl.tabDelete"></field>  
+          
+    </div>
 
-        <div>
-                <field id="endereco" label="Endereço" grid="12 6 4" placeholder="Endereço" model="funCtrl.funcionario.endereco" readonly="funCtrl.tabDelete"></field>
-                <field id="numero" label="Número" grid="12 6 4" placeholder="Número" model="funCtrl.funcionario.numero" readonly="funCtrl.tabDelete"></field>
-                <field id="complemento" label="Complemento" grid="12 6 4" placeholder="Complemento" model="funCtrl.funcionario.complemento"
-                        readonly="funCtrl.tabDelete"></field>
-                
-                <field id="cep" label="CEP" grid="12 6 4" placeholder="CEP" model="funCtrl.funcionario.cep" readonly="funCtrl.tabDelete"></field>
-                <field id="cidade" label="*Cidade" grid="12 6 4" placeholder="Nome da cidade" model="funCtrl.funcionario.cidade" readonly="funCtrl.tabDelete"></field>
-                <field id="estato" label="Estado" grid="12 6 4" placeholder="Estado" model="funCtrl.funcionario.estado" readonly="funCtrl.tabDelete"></field>
-                
-                <field id="bairro" label="Bairro" grid="12 6 4" placeholder="Nome do bairro" model="funCtrl.funcionario.bairro" readonly="funCtrl.tabDelete"></field>
-                <field id="telefone" label="Telefone 1" grid="12 6 4" placeholder="Telefone 1" model="funCtrl.funcionario.telefone" readonly="funCtrl.tabDelete"></field>
-                <field id="telefone2" label="Telefone 2" grid="12 6 4" placeholder="Telefone 2" model="funCtrl.funcionario.telefone2" readonly="funCtrl.tabDelete"></field>
-                
-                <field id="email" label="E-mail" grid="12 6 4" placeholder="Informe o e-teste" model="funCtrl.funcionario.email" readonly="funCtrl.tabDelete"></field>
-
-        </div>
-
+    <!-- Botão - inculuir, exluir, altear e gravar-->
+    <div ng-include="'funcionario/button.html'"></div>
 </div>
+

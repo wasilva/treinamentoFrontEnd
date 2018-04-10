@@ -7,7 +7,7 @@ angular.module('wasinfoErp').factory('tabs', [ function() {
       tabDelete = false,
       tabAddress = false,
       tabDadosPessoais = false,
-      tabDadosComplementar = false,
+      tabDadosComplementares = false,
       tabDadosAdministrativos = false
    }) {
       owner.tabList = tabList
@@ -16,7 +16,7 @@ angular.module('wasinfoErp').factory('tabs', [ function() {
       owner.tabDelete = tabDelete
       owner.tabAddress = tabAddress
       owner.tabDadosPessoais = tabDadosPessoais
-      owner.tabDadosComplementar = tabDadosComplementar
+      owner.tabDadosComplementares = tabDadosComplementares
       owner.tabDadosAdministrativos = tabDadosAdministrativos
    }
 

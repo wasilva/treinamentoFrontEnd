@@ -1,0 +1,8 @@
+<div ng-include="'funcionario/header.html'"></div>
+
+<div class="tab-content">
+  <div class="tab-pane" id="tabDadosPessoais" ng-include="'funcionario/dadosPessoais.html'" ng-if="funCtrl.tabDadosPessoais" ng-class="{active: funCtrl.tabDadosPessoais}"></div>
+  <div class="tab-pane" id="tabAddress" ng-include="'funcionario/dadosEndereco.html'" ng-if="funCtrl.tabAddress"></div>
+  <div class="tab-pane" id="tabDadosComplementares" ng-include="'funcionario/dadosComplementares.html'" ng-if="funCtrl.tabDadosComplementares"></div>
+  <div class="tab-pane" id="tabDadosAdministrativos" ng-include="'funcionario/dadosAdministrativos.html'" ng-if="funCtrl.tabDadosAdministrativos"></div>
+</div>

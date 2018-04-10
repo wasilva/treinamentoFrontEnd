@@ -4,6 +4,7 @@
         '$location',
         'msgs',
         'tabs',
+        '$scope',
         FuncionarioController
     ])
 
@@ -20,18 +21,11 @@
                 console.log(vm.funcionario)
                 $http.get(`${url}/count`).then(function (response) {
                     vm.pages = Math.ceil(response.data.value / 10)
-                    tabs.show(vm, { tabList: true, tabCreate: true, tabAddress: true, tabDadosPessoais: true, tabDadosComplementar: true, tabDadosAdministrativos: true })
+                    tabs.show(vm, { tabList: true, tabCreate: true, tabAddress: true, tabDadosPessoais: true, tabDadosComplementares: true, tabDadosAdministrativos: true })
                 })
             })
         }
 
-        //Exibe as tabs do cadastro do funcionario
-        vm.showTabFunCad = function (funcionario) {
-            vm.funcionario = funcionario
-            tabs.show(vm, { tabAddress: true, tabDadosPessoais: true })
-        }
-
-        
         // Grava os registros no banco
         vm.create = function () {
             $http.post(url, vm.funcionario).then(function (response) {
@@ -53,11 +47,13 @@
             })
         }
 
+        // Exibe a aba editar
         vm.showTabUpdate = function (funcionario) {
             vm.funcionario = funcionario
             tabs.show(vm, { tabUpdate: true })
         }
 
+        // Exibe a aba excluir
         vm.showTabDelete = function (funcionario) {
             vm.funcionario = funcionario
             tabs.show(vm, { tabDelete: true })
