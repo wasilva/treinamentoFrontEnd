@@ -38,7 +38,7 @@
                         <li class="active" ng-if="funCtrl.tabCreate">
                             <a href data-target="#tabCreate" data-toggle="tab" aria-expanded="true">Dados pessoais</a>
                         </li>
-                        <li class="active" ng-if="funCtrl.tabAddress">
+                        <li class="active"ng-if="funCtrl.tabAddress">
                             <a href data-target="#tabAddress" data-toggle="tab" aria-expanded="true">Endereço</a>
                         </li>
                         <li class="" ng-if="funCtrl.tabDadosComplementar">
@@ -51,13 +51,11 @@
                 </div>
             </div>
         </div>
-    
 
         <div class="tab-content">
             <div class="tab-pane" id="tabList" ng-include="'funcionario/list.html'" ng-class="{active: funCtrl.tabList}" ng-if="funCtrl.tabList"></div>
-            <div class="tab-pane" id="tabAddress" ng-include="'funcionario/dadosEndereco.html'" ng-if="funCtrl.tabAddress"></div>
-            <div class="tab-pane" id="tabDadosComplementar" ng-include="'funcionario/dadosComplementar.html'" ng-if="funCtrl.tabDadosComplementar"></div>
-            <div class="tab-pane" id="tabDadosAdministrativos" ng-include="'funcionario/dadosAdminitrativo.html'" ng-if="funCtrl.tabDadosAdministrativos"></div>
+            <div class="tab-pane" id="tabAddress" ng-include="'funcionario/address.html'" ng-if="funCtrl.tabAddress"></div>
+            <div class="tab-pane" id="tabAddress" ng-include="'funcionario/address.html'" ng-if="funCtrl.tabAddress"></div>
             <div class="tab-pane" id="tabCreate" ng-include="'funcionario/form.html'" ng-if="funCtrl.tabCreate"></div>
             <div class="tab-pane" id="tabUpdate" ng-include="'funcionario/form.html'" ng-class="{active: funCtrl.tabUpdate}" ng-if="funCtrl.tabUpdate"></div>
             <div class="tab-pane" id="tabDelete" ng-include="'funcionario/form.html'" ng-class="{active: funCtrl.tabDelete}" ng-if="funCtrl.tabDelete"></div>
