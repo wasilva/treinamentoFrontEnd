@@ -4,24 +4,27 @@
 <section class="content">
     <div class="nav-tabs-custom" ng-controller="FuncionarioCtrl as funCtrl">
         <ul class="nav nav-tabs">
+            <!-- Aba lista -->
             <li ng-if="funCtrl.tabList" ng-class="{active: funCtrl.tabList}" >
                 <a href data-target="#tabList" data-toggle="tab">
                     <i class="fa fa-bars"></i> Lista
                 </a>
             </li>
-
+            <!-- Aba incluir -->
             <li ng-if="funCtrl.tabCreate">
                 <a href data-target="#tabCreate" data-toggle="tab">
                     <i class="fa fa-plus"></i> Incluir
                 </a>
             </li>
 
+            <!-- Aba alterar -->
             <li ng-if="funCtrl.tabUpdate" ng-class="{active: funCtrl.tabUpdate}">
                 <a href data-target="#tabUpdate" data-toggle="tab">
                     <i class="fa fa-pencil"></i> Alterar                   
                 </a>
             </li>
 
+            <!-- Aba Exluir -->
             <li ng-if="funCtrl.tabDelete" ng-class="{active: funCtrl.tabDelete}">
                 <a href data-target="#tabDelete" data-toggle="tab">
                     <i class="fa fa-trash-o"></i> Excluir
@@ -29,12 +32,13 @@
             </li>
         </ul>
     
+        <!-- Habilita as abas do cadastro do funcionario, em conteiner no ng-include -->
         <div class="tab-content">
-
+            
             <div class="tab-pane" id="tabList" ng-include="'funcionario/list.html'" ng-class="{active: funCtrl.tabList}" ng-if="funCtrl.tabList"></div>
             <div class="tab-pane" id="tabCreate" ng-include="'funcionario/container.html'" ng-if="funCtrl.tabCreate"></div>
-            <div class="tab-pane" id="tabUpdate" ng-include="'funcionario/dadosPessoais.html'" ng-class="{active: funCtrl.tabUpdate}" ng-if="funCtrl.tabUpdate"></div>
-            <div class="tab-pane" id="tabDelete" ng-include="'funcionario/dadosPessoais.html'" ng-class="{active: funCtrl.tabDelete}" ng-if="funCtrl.tabDelete"></div>
+            <div class="tab-pane" id="tabUpdate" ng-include="'funcionario/container.html'" ng-class="{active: funCtrl.tabUpdate}" ng-if="funCtrl.tabUpdate"></div>
+            <div class="tab-pane" id="tabDelete" ng-include="'funcionario/container.html'" ng-class="{active: funCtrl.tabDelete}" ng-if="funCtrl.tabDelete"></div>
 
         </div>
         
