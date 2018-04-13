@@ -4,7 +4,7 @@
     <div class="box-footer">
 
         <field id="nomefuncionario" label="*Nome" grid="12 6 4" placeholder="Informe o nome completo" model="funCtrl.funcionario.nomefuncionario" readonly="funCtrl.tabDelete"></field>
-        <field id="datanascimento" label="*Data de Nascimento" grid="12 6 4" type="date" model="funCtrl.funcionario.datanascimento" readonly="funCtrl.tabDelete"></field>
+        <field id="datanascimento" label="*Data de Nascimento" grid="12 6 4" type="text" model="funCtrl.funcionario.datanascimento" readonly="funCtrl.tabDelete" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask=""></field>
         <field id="cpf" label="*Nº CPF" grid="12 6 4" placeholder="Informe o CPF" model="funCtrl.funcionario.cpf" readonly="funCtrl.tabDelete"></field>
 
         <field id="rg" label="*Nº RG" grid="12 6 4" placeholder="Informe o RG" model="funCtrl.funcionario.rg" readonly="funCtrl.tabDelete"></field>
