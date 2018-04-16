@@ -2,7 +2,7 @@
 <content-header name="Funcionário" small="Cadastro"></content-header>
 
 <section class="content">
-    <div class="nav-tabs-custom" ng-controller="FuncionarioCtrl as funCtrl">
+    <div class="nav-tabs-custom" ng-controller="FuncionarioCtrl as funCtrl" ng-controller="DateController as dateCtrl">
         <ul class="nav nav-tabs">
             <!-- Aba lista -->
             <li ng-if="funCtrl.tabList" ng-class="{active: funCtrl.tabList}" >

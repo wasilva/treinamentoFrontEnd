@@ -5,6 +5,8 @@
         'msgs',
         'tabs',
         '$scope',
+        '$filter',
+        
         FuncionarioController
     ])
 
@@ -29,6 +31,7 @@
         // Grava os registros no banco
         vm.create = function () {
             $http.post(url, vm.funcionario).then(function (response) {
+                funcionario.
                 vm.refresh()
                 msgs.addSuccess('Operação realizada com sucesso!')
             }).catch(function (response) {

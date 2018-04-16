@@ -3,38 +3,199 @@
 	<!-- div ng-include="'/template/menu/searchForm.html'"></div -->
 	<ul class="sidebar-menu">
 		<li class="header">NAVEGAÇÃO PRINCIPAL</li>
-		<li>
-			<a ui-sref="dashboard">
-				<i class="fa fa-dashboard"></i> <span>Dashboard</span>
+
+		<li class="treeview">
+			<a href>
+				<i class="fa fa-edit"></i>
+				<span>Cadastro</span>
+				<i class="fa fa-angle-left pull-right"></i>
 			</a>
+			<ul class="treeview-menu">
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-users"></i> Cliente</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-industry"></i> Empresa</a>
+				</li>
+
+				<li>
+					<a ui-sref="funcionario">
+						<i class="fa fa-briefcase"></i> Funcionário</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-truck"></i> Fornecedor</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-glass"></i> Produto</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-user"></i> Login</a>
+				</li>
+			</ul>
+
 		</li>
 
 		<li class="treeview">
-		   <a href>
-		        <i class="fa fa-edit"></i> <span>Cadastros</span>
-		        <i class="fa fa-angle-left pull-right"></i>
-		  </a>
-		  <ul class="treeview-menu">
-				
+			<a href>
+				<i class="fa fa-bank (alias)"></i>
+				<span>Financeiro</span>
+				<i class="fa fa-angle-left pull-right"></i>
+			</a>
+
+			<ul class="treeview-menu">
 				<li>
-					<a ui-sref="billingCycle"><i class="fa fa-usd"></i> Financeiro</a>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-object-align-vertical"></i> Caixa</a>
 				</li>
 
 				<li>
-					<a ui-sref="funcionario"><i class="fa fa-briefcase"></i> Funcionário</a>
+					<a ui-sref="#">
+						<i class="fa fa-money"></i> Contas à Pagar</a>
 				</li>
-	
+
 				<li>
-					<a ui-sref="#"><i class="fa fa-truck"></i> Fornecedor</a>
+					<a ui-sref="#">
+						<i class="fa fa-money"></i> Contas a Receber</a>
+				</li>
+
+				<li>
+					<a ui-sref="dashboard">
+						<i class="fa fa-dashboard"></i>
+						<span>Dashboard</span>
+					</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-list-alt"></i> Recíbo</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-file-text-o"></i> Relatório</a>
 				</li>
 			</ul>
-			
 		</li>
-		<li class="header">SISTEMA</li>
-		
+
+		<li class="treeview">
+			<a href>
+				<i class="fa glyphicon glyphicon-equalizer"></i>
+				<span>Gestão de Pessoas</span>
+				<i class="fa fa-angle-left pull-right"></i>
+			</a>
+			<ul class="treeview-menu">
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-fire"></i> Administração de Pessoal</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-gift"></i> Arquitetura Organizacional</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-line-chart"></i> Avaliação de Desempenho</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-shekel (alias)"></i> Cargo e Salário</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-plus-square"></i> Medicína e Seg. do Trabalho</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-time"></i> Ponto Eletrônico</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-pencil-square"></i> Recrutamento e Seleção</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa fa-spinner"></i> Treinamento</a>
+				</li>
+			</ul>
+		</li>
+		<li class="treeview">
+			<a href>
+				<i class="glyphicon glyphicon-tags"></i>
+				<span>Pedido</span>
+				<i class="fa fa-angle-left pull-right"></i>
+			</a>
+
+			<ul class="treeview-menu">
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-folder-open"></i> Contrato</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-shopping-cart"></i> Pedido de Compra</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-piggy-bank"></i> Pedido de Venda</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-paste"></i> Orçamento</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-link"></i> Ordem de Serviço</a>
+				</li>
+
+			</ul>
+		</li>
+
+		<li class="treeview">
+			<a href>
+				<i class="fa glyphicon glyphicon-compressed"></i>
+				<span>Sistema</span>
+				<i class="fa fa-angle-left pull-right"></i>
+			</a>
+			<ul class="treeview-menu">
+				<li>
+					<a ui-sref="#">
+						<i class="fa   glyphicon glyphicon-object-align-top"></i> Grupo de Acesso</a>
+				</li>
+
+				<li>
+					<a ui-sref="#">
+						<i class="fa glyphicon glyphicon-object-align-bottom"></i> Perfil de Acesso</a>
+				</li>
+			</ul>
+
+		</li>
+
+		<li class="header">Informações do Sistema</li>
+
 		<li>
 			<a href="#" target="_self">
-				<i class="fa fa-info-circle text-blue"></i> <span>Sobre</span>
+				<i class="fa fa-info-circle text-blue"></i>
+				<span>Sobre</span>
 			</a>
 		</li>
 	</ul>
