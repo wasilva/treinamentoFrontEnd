@@ -16,7 +16,8 @@
         vm.user = { email: 'contato.wasilva@hotmail.com', password: 'WASinf@1985', name: 'William Alves da Silva', confirm_password: 'WASinf@1985' };
 
         vm.changeMode = () => vm.loginMode = !vm.loginMode
-
+       
+        // Ao fazer login é direncionado para a pagina 
         vm.login = () =>
         {
             auth.login(vm.user)
@@ -28,6 +29,7 @@
                 ;
         }
 
+        // Ao fazer login é direncionado para a pagina 
         vm.signup = () =>
         {
             auth.signup(vm.user)

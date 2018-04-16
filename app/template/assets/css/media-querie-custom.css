@@ -1,0 +1,27 @@
+
+/* Configuração para tamanhos de dispositivos */
+@media (max-width: 600px) 
+{
+
+  th:nth-child(2), th:nth-child(3)  {
+    display: none;
+  }
+
+  td:nth-child(2), td:nth-child(3) {
+    display: none;
+  }
+
+  .tab-pane td{
+    font-size: 12px;
+  }
+
+  .box-body {
+    padding: 10px 0;
+  }
+
+  .nav>li>a {
+    padding: 10px 11px;
+  }
+
+   
+}
