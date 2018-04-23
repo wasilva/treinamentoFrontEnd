@@ -52,11 +52,8 @@
 
         // Exibe a aba editar
         vm.showTabUpdate = function (funcionario) {
-            console.log('funcionario', funcionario)
+            // console.log('funcionario', funcionario)
             vm.funcionario = funcionario
-            datacontratacao: new Date; (funcionario.timezone)
-            console.log('funcionario', datacontratacao)
-            
             tabs.show(vm, { tabUpdate: true, tabAddress: true, tabDadosPessoais: true, tabDadosComplementares: true, tabDadosAdministrativos: true })
         }
 
@@ -65,7 +62,6 @@
             vm.funcionario = funcionario
             tabs.show(vm, { tabDelete: true, tabAddress: true, tabDadosPessoais: true, tabDadosComplementares: true, tabDadosAdministrativos: true })
         }
-
 
         //Deleta os registros
         vm.delete = function () {
