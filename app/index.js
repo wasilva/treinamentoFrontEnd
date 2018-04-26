@@ -3,3 +3,6 @@ angular.module('wasinfoErp', [
   'ngAnimate',
   'toastr'
 ])
+
+// angular.module('wasinfoErp', [
+  // 'angular-input-masks']);
