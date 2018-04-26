@@ -56,7 +56,11 @@
 
         // Exibe a aba editar
         vm.showTabUpdate = function (funcionario) {
+<<<<<<< HEAD
             // console.log(  funcionario)
+=======
+            // console.log('funcionario', funcionario)
+>>>>>>> 62c3cb7be896603b1ce22fcec89ebda9db03dbd3
             vm.funcionario = funcionario
             tabs.show(vm, { tabUpdate: true, tabAddress: true, tabDadosPessoais: true, tabDadosComplementares: true, tabDadosAdministrativos: true })
         }
