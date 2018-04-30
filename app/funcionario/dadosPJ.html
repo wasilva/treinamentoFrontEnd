@@ -1,0 +1,25 @@
+
+
+<!-- Tela de inclusão de registro -->
+<div role="form">    
+   
+    <div class="box-footer">
+
+        <field id="razaosocial" label="Razão Social" grid="12 6 4" placeholder="Informe o nome completo" model="funCtrl.funcionario.nomefuncionario" readonly="funCtrl.tabDelete"></field>
+        <field id="nomefantasia" label="*Nome fantasia" grid="12 6 4" model="funCtrl.funcionario.nomefantasia" readonly="funCtrl.tabDelete"></field>
+        <field id="dataabertura" label="Data de abertura" grid="12 6 4" type='date' placeholder="Data de abertura" model="funCtrl.funcionario.dataabertura" readonly="funCtrl.tabDelete"></field>
+
+        <field id="cnpj" label="CNPJ" grid="12 6 4" placeholder="Informe o RG" model="funCtrl.funcionario.rg" readonly="funCtrl.tabDelete"></field>
+        <field id="inscricaoestadual" label="Inscrição estadual" grid="12 6 4" placeholder="Informe a inscrição estadual" model="funCtrl.funcionario.orgaoemissor" readonly="funCtrl.tabDelete"></field>
+        <field id="inscricaomunicipal" label="Inscrição municipal" grid="12 6 4" placeholder="Informe a inscrição municipal" model="funCtrl.funcionario.inscricaomunicipal" readonly="funCtrl.tabDelete"></field>
+        
+        <field id="ramoatividade" label="Ramo de atividade" grid="12 6 4" placeholder="Informe a naturalidade" model="funCtrl.funcionario.naturalidade" readonly="funCtrl.tabDelete"></field>
+        <field id="datainiciocontrato" label="Data de inicio do contrato" grid="12 6 4" type="date" model="funCtrl.funcionario.datainiciocontrato" readonly="funCtrl.tabDelete"></field>
+        <field id="datafimcontrato" label="Data do fim do contrato" grid="12 6 4" placeholder="Informe o PIS" type="date" model="funCtrl.funcionario.datafimcontrato" readonly="funCtrl.tabDelete"></field>
+
+    </div>
+
+      <!-- Botão - inculuir, exluir, altear e gravar-->
+      <div ng-include="'funcionario/button.html'"></div>      
+</div>
+

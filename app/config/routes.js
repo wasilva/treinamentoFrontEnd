@@ -16,7 +16,12 @@ angular.module('wasinfoErp').config([
       .state('funcionario', {
         url: "/funcionarios?page",
         templateUrl: "funcionario/tabs.html"
-      });
+      })
+
+      .state('cliente', {
+      url: "/clientes?page",
+      templateUrl: "cliente/tabs.html"
+    });
 
     $httpProvider.interceptors.push('handleResponseError')
   }])
